@@ -45,7 +45,7 @@ endif()
 
 # Build Options
 option(RTAUDIO_BUILD_PYTHON "Build PyRtAudio python bindings" OFF)
-set(RTAUDIO_TARGETNAME_UNINSTALL "uninstall" CACHE STRING "Name of 'uninstall' build target")
+set(RTAUDIO_TARGETNAME_AUNINSTALL "auninstall" CACHE STRING "Name of 'auninstall' build target")
 
 # API Options
 option(RTAUDIO_API_DS "Build DirectSound API" OFF)
@@ -363,7 +363,7 @@ configure_file(
     "${CMAKE_CURRENT_BINARY_DIR}/RtAudioConfigUninstall.cmake" @ONLY)
 
 # Create uninstall target.
-add_custom_target(${RTAUDIO_TARGETNAME_UNINSTALL}
+add_custom_target(${RTAUDIO_TARGETNAME_AUNINSTALL}
     COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/RtAudioConfigUninstall.cmake)
 
 install(
